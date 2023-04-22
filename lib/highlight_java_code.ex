@@ -1,18 +1,25 @@
 defmodule HighlightJavaCode do
-  @moduledoc """
-  Documentation for `HighlightJavaCode`.
-  """
 
-  @doc """
-  Hello world.
 
-  ## Examples
+def exec(str) do
+      str
+      |> to_charlist()
+      |> :lexer.string()
+      |> elem(1)
+      |> Enum.map(fn {token, cl} ->
+        case token do
 
-      iex> HighlightJavaCode.hello()
-      :world
-
-  """
-  def hello do
-    :world
+          :integer -> "<code style =\"color:blue\">#{cl}</code>"
+          :identifier -> "<code style =\"color:magenta\">#{cl}</code>"
+          :keyword -> "<code style =\"color:green\">#{cl}</code>"
+          :hexa -> "<code style =\"color:orange\">#{cl}</code>"
+          _-> to_string(cl)
+        end
+        end)
   end
+
+  def read(file) do
+     File.read!(file) |> to_charlist() |> :scan.string
+  end
+
 end
