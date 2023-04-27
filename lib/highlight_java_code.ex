@@ -4,7 +4,7 @@ defmodule HighlightJavaCode do
 def exec(str) do
       str
       |> to_charlist()
-      |> :lexer.string()
+      |> :scan.string()
       |> elem(1)
       |> Enum.map(fn {token, cl} ->
         case token do
