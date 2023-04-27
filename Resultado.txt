@@ -54,7 +54,7 @@ public class Hola {
     int registrado = (((8 + 1) - 5) / 6) * 1;
     String myname = "Josafat";
     int myName = 8;
-    char myame = 'k';
+    char myame = k;
     float reGistrado = 8.9f;
     boolean reGistRado = true;
 
@@ -86,7 +86,7 @@ public class Hola {
       System.out.println("Its Okey");
     }
 
-    String result = (1 < 18) ? "Good day." : "Good evening.";
+    String result = (1 < 18)  "Good day." : "Good evening.";
 
   }
 
