@@ -18,9 +18,9 @@ defmodule HighlightJavaCode do
           "<code style =\"color:white\">#{value}</code>"
         :inlineComment ->
           "<code style =\"color:#006c43\">#{value}</code>"
-        #:snippet ->
-         # "<code style =\"color:gray\">#{value}</code>"
         :bool ->
+          "<code style =\"color:#b58912\">#{value}</code>"
+        :null ->
           "<code style =\"color:#b58912\">#{value}</code>"
         :multiLineComment ->
           "<code style =\"color:#006c43\">#{value}</code>"
@@ -70,11 +70,33 @@ defmodule HighlightJavaCode do
           "<code style =\"color:#759900\">#{value}</code>"
         :'^=' ->
           "<code style =\"color:#759900\">#{value}</code>"
+        :'==' ->
+          "<code style =\"color:#759900\">#{value}</code>"
+        :'<<' ->
+          "<code style =\"color:#759900\">#{value}</code>"
+        :'~' ->
+          "<code style =\"color:#759900\">#{value}</code>"
+        :'>>' ->
+          "<code style =\"color:#759900\">#{value}</code>"
+        :'>>>' ->
+          "<code style =\"color:#759900\">#{value}</code>"
         :'<<=' ->
           "<code style =\"color:#759900\">#{value}</code>"
         :'>>=' ->
           "<code style =\"color:#759900\">#{value}</code>"
-        :'==' ->
+        :'>>>=' ->
+          "<code style =\"color:#759900\">#{value}</code>"
+        :'->' ->
+          "<code style =\"color:#759900\">#{value}</code>"
+        :'>=' ->
+          "<code style =\"color:#759900\">#{value}</code>"
+        :'<=' ->
+          "<code style =\"color:#759900\">#{value}</code>"
+        :'!=' ->
+          "<code style =\"color:#759900\">#{value}</code>"
+        :'&&' ->
+          "<code style =\"color:#759900\">#{value}</code>"
+        :'||' ->
           "<code style =\"color:#759900\">#{value}</code>"
         :identifier ->
           "<code style =\"color:#7c8c92\">#{value}</code>"
@@ -83,12 +105,6 @@ defmodule HighlightJavaCode do
         :float ->
           "<code style =\"color:#3affff\">#{value}</code>"
         :integer ->
-          "<code style =\"color:#3affff\">#{value}</code>"
-        :hexadecimal ->
-          "<code style =\"color:#3affff\">#{value}</code>"
-        :octal ->
-          "<code style =\"color:#3affff\">#{value}</code>"
-        :binary ->
           "<code style =\"color:#3affff\">#{value}</code>"
         :character ->
           "<code style =\"color:#3affff\">#{value}</code>"
