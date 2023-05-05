@@ -1,7 +1,8 @@
 Definitions.
 Rules.
-([0-9]+[_]*[0-9]*[lL]*)|(0[bB][01]+[_]*[01]*[lL]*)|(0[0-7]+[_]*[0-7]*[lL]*)|(0[xX][0-9a-fA-F]+[_]*[0-9a-fA-F]*[lL]*)  : {token,{integer,TokenLine, TokenChars}}.
-[0-9]*(\.|([eE][+-]?))[0-9]*[eE]?[+-]?[0-9]*[fFdD]* : {token,{float,TokenLine, TokenChars}}.
+([0-9_]+[lL]*)|(0[bB][01_]+[lL]*)|(0[0-7_]+[lL]*)|(0[xX][0-9a-fA-F_]+[lL]*)  : {token,{integer,TokenLine, TokenChars}}.
+([0-9]+\.[0-9]*[eE][+-]?[0-9]+[fFdD]?)|([0-9]+\.[0-9]*[fFdD]?)|([0-9]*\.[0-9]+[eE][+-]?[0-9]+[fFdD]?)|([0-9]*\.[0-9]+[fFdD]?)|([0-9]+[eE][+-]?[0-9]+[fFdD]?)|([0-9]+[fFdD]+) : {token,{float,TokenLine, TokenChars}}.
+
 \'(\\.|[^\\\'\n\r])*\' : {token,{character,TokenLine, TokenChars}}.
 [;|,|.|...|@|::] : {token,{separators,TokenLine,TokenChars}}.
 [\(\)\[\]\{\}] : {token,{separators,TokenLine,TokenChars}}.

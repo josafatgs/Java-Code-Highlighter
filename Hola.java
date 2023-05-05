@@ -54,8 +54,33 @@ public class Hola {
     int registrado = (((8 + 1) - 5) / 6) * 1;
     String myname = "Josafat";
     int myName = 8;
+    int example0 = 0;
+    int example1 = 2;
+    int example2 = 0372;
+    int example3 = 0xDada_Cafe;
+    int example4 = 1996;
+    int example5 = 0x00_FF__00_FF;
+    long example6 = 0l;
+    long example7 = 0777L;
+    long example8 = 0x100000000L;
+    long example9 = 2_147_483_648L;
+    long example10 = 0xC0B0L;
+
     char myame = 'k';
     float reGistrado = 8.9f;
+    float example = 1e1f;   
+    float example = 2.f;  
+    float example = .3f;    
+    float example = 0f;  
+    float example = 3.14f;    
+    float example = 6.022137e+23f;
+    float example = 1e1;
+    float example = 2.;  
+    float example = .3;  
+    float example = 0.0;    
+    float example = 3.14;    
+    float example = 1e-9d;    
+    float example = 1e137;
     boolean reGistRado = true;
 
     registrado += 1;
