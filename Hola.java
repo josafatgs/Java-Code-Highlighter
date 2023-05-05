@@ -73,10 +73,10 @@ public class Hola {
     registrado ++;
     registrado = registrado % 2;
 
-    binario = 0b1010;
-    octal = 012;
-    hexadecimal = 0xA;
-    character = '\u0000';
+    int binario = 0b1010;
+    int octal = 012;
+    int hexadecimal = 0xA;
+    int character = '\u0000';
 
     System.out.println("Hello \" Esto tambien es parte del string\" World");//This \' is a comment 1
     System.out.println("Hello\n 'Hola' Josafat");
