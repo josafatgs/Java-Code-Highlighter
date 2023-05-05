@@ -1,5 +1,7 @@
 defmodule HighlightJavaCode do
 
+  #HighlightJavaCode.exec("Hola.java")
+
   def exec(fileName) do
     data = File.read!(fileName) |> to_charlist() |> :scan.string
 
@@ -7,66 +9,49 @@ defmodule HighlightJavaCode do
     string_data = for {type, _, value} <- elem(data, 1) do
       case type do
         :reservedKeyword ->
-          value
+          "<code style =\"color:#0baaa2\">#{value}</code>"
         :contextualKeyword ->
-          value
+          "<code style =\"color:blue\">#{value}</code>"
         :string ->
-          value
+          "<code style =\"color:#3bbc00\">#{value}</code>"
         :separators ->
-          value
+          "<code style =\"color:white\">#{value}</code>"
         :inlineComment ->
-          value
-        :snippet ->
-          value
+          "<code style =\"color:#006c43\">#{value}</code>"
+        #:snippet ->
+         # "<code style =\"color:gray\">#{value}</code>"
         :bool ->
-          value
+          "<code style =\"color:#b58912\">#{value}</code>"
         :blockComment ->
-          value
+          "<code style =\"color:#006c43\">#{value}</code>"
         :+ ->
-          value
+          "<code style =\"color:#759900\">#{value}</code>"
         :- ->
-          value
+          "<code style =\"color:#759900\">#{value}</code>"
         :* ->
-          value
+          "<code style =\"color:#759900\">#{value}</code>"
         :/ ->
-          value
+          "<code style =\"color:#759900\">#{value}</code>"
         := ->
-          value
+          "<code style =\"color:#759900\">#{value}</code>"
         :identifier ->
-          value
+          "<code style =\"color:#7c8c92\">#{value}</code>"
         :space ->
-          value
+          "<code>#{value}</code>"
         :float ->
-          value
-        :operators ->
-          value
+          "<code style =\"color:#3affff\">#{value}</code>"
         _ ->
-          value
+          "<code style =\"color:red\">#{value}</code>"
       end
     end
     |> Enum.join
 
+    result = "<html><head><title>#{fileName}</title></head><body style=\"background-color:#081420;\"><pre>#{string_data}</pre></body></html>"
+
     # Escribir la cadena en un archivo
-    File.write("Resultado.txt", string_data)
+    File.write("Resultado.html", result)
   end
 
-
-  # def exec(str) do
-  #     str
-  #     |> to_charlist()
-  #     |> :lexer.string()
-  #     |> elem(1)
-  #     |> Enum.map(fn {token, cl} ->
-  #       case token do
-
-  #         :integer -> "<code style =\"color:blue\">#{cl}</code>"
-  #         :identifier -> "<code style =\"color:magenta\">#{cl}</code>"
-  #         :keyword -> "<code style =\"color:green\">#{cl}</code>"
-  #         :hexa -> "<code style =\"color:orange\">#{cl}</code>"
-  #         _-> to_string(cl)
-  #       end
-  #       end)
-  # end
 
 
 end
