@@ -76,7 +76,7 @@ public class Hola {
     int binario = 0b1010;
     int octal = 012;
     int hexadecimal = 0xA;
-    int character = '\u0000';
+    char character = '\u0000';
 
     System.out.println("Hello \" Esto tambien es parte del string\" World");//This \' is a comment 1
     System.out.println("Hello\n 'Hola' Josafat");
