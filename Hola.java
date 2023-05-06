@@ -102,6 +102,9 @@ public class Hola {
     int octal = 012;
     int hexadecimal = 0xA;
     char character = '\u0000';
+    short ex = 1000;
+    long nu = 1000000000000000000L;
+    byte by = 127;
 
     System.out.println("Hello \" Esto tambien es parte del string\" World");//This \' is a comment 1
     System.out.println("Hello\n 'Hola' Josafat");
