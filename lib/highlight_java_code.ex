@@ -1,5 +1,6 @@
 defmodule HighlightJavaCode do
 
+  #HighlightJavaCode.time("exec","Hola.java")
   def time(funtionName,argument) do
     {tiempo, resultado} = :timer.tc(__MODULE__,String.to_atom(funtionName), [argument])
     IO.puts "La función exec tardó #{tiempo} microsegundos en ejecutarse y devolvió #{resultado}."
