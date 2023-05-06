@@ -111,6 +111,14 @@ defmodule HighlightJavaCode do
           "<code style =\"color:#3affff\">#{value}</code>"
         :integer ->
           "<code style =\"color:#3affff\">#{value}</code>"
+        :octal ->
+          "<code style =\"color:#3affff\">#{value}</code>"
+        :byte ->
+          "<code style =\"color:#3affff\">#{value}</code>"
+        :long ->
+          "<code style =\"color:#3affff\">#{value}</code>"
+        :hexadecimal ->
+          "<code style =\"color:#3affff\">#{value}</code>"
         :character ->
           "<code style =\"color:#3affff\">#{value}</code>"
         _ ->
