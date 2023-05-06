@@ -1,13 +1,12 @@
 defmodule HighlightJavaCode do
 
-  #HighlightJavaCode.time("exec","Hola.java")
+  #HighlightJavaCode.time("exec","FileName")
   def time(funtionName,argument) do
     {tiempo, resultado} = :timer.tc(__MODULE__,String.to_atom(funtionName), [argument])
     IO.puts "La función exec tardó #{tiempo} microsegundos en ejecutarse y devolvió #{resultado}."
   end
 
   #HighlightJavaCode.exec("Hola.java")
-
   def exec(fileName) do
     data = File.read!(fileName) |> to_charlist() |> :scan.string
 
@@ -120,7 +119,17 @@ defmodule HighlightJavaCode do
     end
     |> Enum.join
 
-    result = "<html><head><title>#{fileName}</title></head><body style=\"background-color:#081420;\"><pre>#{string_data}</pre></body></html>"
+    result = "<html>
+
+                <head>
+                  <title>#{fileName}</title>
+                </head>
+
+                <body style=\"background-color:#081420;\">
+                  <pre>#{string_data}</pre>
+                </body>
+
+              </html>"
 
     # Escribir la cadena en un archivo
     File.write("Resultado.html", result)

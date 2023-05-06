@@ -31,7 +31,7 @@ exports|opens|requires|uses|module|permits|sealed|var|non-sealed|provides|to|wit
 [a-zA-Z_$][a-zA-Z_0-9]* : {token,{identifier,TokenLine,TokenChars}}.
 [\s\t\n\r]              : {token,{space, TokenLine, TokenChars}}.
 
-. :skip_token.
+
 Erlang code.
 
 
