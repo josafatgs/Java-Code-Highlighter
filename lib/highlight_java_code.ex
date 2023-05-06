@@ -7,7 +7,7 @@ defmodule HighlightJavaCode do
   end
 
   #HighlightJavaCode.exec("Hola.java")
-  def exec(fileName) do
+  def main(fileName) do
     data = File.read!(fileName) |> to_charlist() |> :scan.string
 
     # Construir una cadena a partir de los datos
